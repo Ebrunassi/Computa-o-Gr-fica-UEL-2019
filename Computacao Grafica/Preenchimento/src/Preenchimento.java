@@ -18,6 +18,9 @@ public class Preenchimento {
 		
 	}
 	public static Mat preencheImagem(Mat im, int x, int y, double []rgb, double []corNova) {
+		if(x > im.height() || y > im.width() || x < 0 || y < 0 )
+			return im;
+
 		double[] rgbIm = im.get(x, y);
 	
 		if(rgbIm != null) {
@@ -87,6 +90,7 @@ public class Preenchimento {
 	    corNova[0] = sc.nextDouble();
 		
 	    // A cor do squirte é RGB(135,202,218)
+	    // A cor da ladybug é RGB(93,188,210)
 	    // Pode troca para amarela RGB(181,218,75)
 	    
 		for(int i = 0; i < im.height(); i++) {
@@ -95,7 +99,7 @@ public class Preenchimento {
 			}
 		}
 		
-		Imgcodecs.imwrite("C:\\Users\\ebrun\\Documents\\preenchimento_cor_resultado.png", imR);
+		Imgcodecs.imwrite("C:\\Users\\ebrun\\Documents\\preenchimento_cor_resultado.jpg", imR);
 		
 	}
 	public static void preenchimento_ponto_fixo(Mat im){
@@ -126,7 +130,7 @@ public class Preenchimento {
 		
 		
 		
-		Imgcodecs.imwrite("C:\\Users\\ebrun\\Documents\\preenchimento_cor_pontoFixo.png", imR);
+		Imgcodecs.imwrite("C:\\Users\\ebrun\\Documents\\preenchimento_cor_pontoFixo.jpg", imR);
 		
 	}
 	
@@ -134,7 +138,7 @@ public class Preenchimento {
 	public static void main(String[] args) {
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 		
-		Mat im = Imgcodecs.imread("C:\\Users\\ebrun\\Documents\\squirtle.png");
+		Mat im = Imgcodecs.imread("C:\\Users\\ebrun\\Documents\\ladybug.jpg");
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("1. Preenchimento pelo centro");
