@@ -1,5 +1,5 @@
 <h2>Preenchimento</h2>
-Este código resolve preenchimento via JFrame, através da iserção 
-dos valores RGB e do limiar (diferença entre os pixels).
+Este cÃ³digo resolve preenchimento via JFrame, atravÃ©s da iserÃ§Ã£o 
+dos valores RGB e do limiar (diferenÃ§a entre os pixels).
 
-![Alt text](C:\Users\ebrun\OneDrive\Área de Trabalho\squirtleee.png?raw=true "Exemplo")
+![Screenshot](squirtleee.png)
